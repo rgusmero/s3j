@@ -1,6 +1,8 @@
 # s3j
 ### c routines for 3j symbol evaluation
 
+The main subroutine
+
 _**double** s3j(**double** j1, **double** j2, **double** j3, **double** m1, **double** m2, **double** m3)_
 
 calculates the following symbol:
@@ -27,6 +29,11 @@ calculates the following symbol:
          +---
            k
 ```           
+### Configuration
+The maximum allowed factorial is S3J_MAX_FACT (currently 25!).
+
+### Testing
+Defining the macro S3J_TEST enables the compilation of a very small test suite.
 
 ### License
 
