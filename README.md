@@ -1,2 +1,29 @@
 # s3j
-c routines for 3j symbol evaluation
+### c routines for 3j symbol evaluation
+
+_**double** s3j(**double** j1, **double** j2, **double** j3, **double** m1, **double** m2, **double** m3)_
+
+calculates the following symbol:
+```
+    ( j1 j2 j3 )
+   (            ) = delta(m1+m2+m3,0) * (-1)^(j1-j2-m3) * 
+    ( m1 m2 m3 )
+
+      +-
+      |  (j1+j2-j3)! (j1-j2+j3)! (-j1+j2+j3)! 
+    * | -------------------------------------- ...
+      |
+      +-
+                                                                 -+ 1/2
+           (j1-m1)! (j1+m1)! (j2-m2)! (j2+m2)! (j3-m3)! (j3+m3)!  |
+      ... ------------------------------------------------------- |     * 
+                              (j1+j2+j3+1)!                       |
+                                                                 -+
+
+         +---
+          \                       (-1)^k
+      *    |   ---------------------------------------------------------------------
+          /      k! (j1+j2-j3-k)! (j1-m1-k)! (j2+m2-k)! (j3-j2+m1+k)! (j3-j1-m2+k)!
+         +---
+           k
+```           
